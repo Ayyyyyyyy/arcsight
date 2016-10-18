@@ -21,6 +21,12 @@ ESM
 * client.defaults.properties
 
 #===================#
+# Java Info
+#===================#
+
+/opt/arcsight/manager/jre/bin/java -version
+
+#===================#
 # Velocity Templates
 #===================#
 
