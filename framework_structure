@@ -134,3 +134,10 @@ agents.sh        agentupgrader.sh          connectorsetup.sh       csvconvert.sh
 
 * agent.defaults.properties
 * agent.wrapper.conf.base
+
+
+#===================#
+# Installed Certs
+#===================#
+
+/opt/arcsight/connectors/connector_X/current/user/agent/certs
