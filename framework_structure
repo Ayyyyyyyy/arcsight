@@ -89,9 +89,36 @@ Connectors
 
 /opt/arcsight/connectors/connector_X/current
 
+#===================#
+# ARCMC - Logs
+#===================#
+
+/opt/arcsight/connectors/connector_X/current
+
+* agent.log
+* agent.out.wrapper
+* ThreadDump
 
 #===================#
 # Conn App - path
 #===================#
 
 /opt/arcsight/connector_X/current
+
+#===================#
+# Conn App - Logs
+#===================#
+
+/opt/arcsight/connector_X/current/logs
+
+* agent.log
+* agent.out.wrapper
+* ThreadDump
+
+#===================#
+# Java | JRE Info
+#===================#
+
+/opt/arcsight/connectors/connector_5/current/jre/bin
+ 
+
