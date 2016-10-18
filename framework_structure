@@ -125,3 +125,12 @@ agentrunjava.sh  agenttempca.sh            backupagentlauncher.sh  connectors.sh
 agentsetup.sh    agentupgradefunctions.sh  checkcompatibility.sh   connectorsvc.sh  execjava.sh               listsubjectdns.sh         restutil.sh     runwuctuningtool.sh
 agent.sh         agentupgradephase2.sh     classpath.sh            connectorup.sh   flexagentwizard.sh        logfu.sh                  runcertutil.sh  tempca.sh
 agents.sh        agentupgrader.sh          connectorsetup.sh       csvconvert.sh    jvmcommonparams.sh        mergeCustomProperties.sh  runjava.sh      upgraderollback.sh
+
+#===================#
+# Agent Files
+#===================#
+
+/opt/arcsight/connectors/connector_X/current/config/
+
+* agent.defaults.properties
+* agent.wrapper.conf.base
