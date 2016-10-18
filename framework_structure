@@ -88,34 +88,21 @@ classpath.sh                       fileencoding.sh                 logfu.sh     
 Connectors
 #=============================================================================#
 
+###
+##### ARCMC
+###
 
 #===================#
-# ARCMC - path
-#===================#
-
-/opt/arcsight/connectors/connector_X/current
-
-#===================#
-# ARCMC - Logs
+# Path
 #===================#
 
 /opt/arcsight/connectors/connector_X/current
 
-* agent.log
-* agent.out.wrapper
-* ThreadDump
-
 #===================#
-# Conn App - path
+# Logs
 #===================#
 
-/opt/arcsight/connector_X/current
-
-#===================#
-# Conn App - Logs
-#===================#
-
-/opt/arcsight/connector_X/current/logs
+/opt/arcsight/connectors/connector_X/current
 
 * agent.log
 * agent.out.wrapper
@@ -126,5 +113,15 @@ Connectors
 #===================#
 
 /opt/arcsight/connectors/connector_5/current/jre/bin
- 
 
+#===================#
+# Scripts
+#===================#
+
+/opt/arc/opt/arcsight/connectors/connector_X/current/bin/scripts
+
+agentcommand.sh  agentsvc.sh               agentup.sh              connector.sh     eventintegritychecker.sh  keytoolgui.sh             obfuscate.sh    runmodutil.sh
+agentrunjava.sh  agenttempca.sh            backupagentlauncher.sh  connectors.sh    exceptions.sh             keytool.sh                regex.sh        runpk12util.sh
+agentsetup.sh    agentupgradefunctions.sh  checkcompatibility.sh   connectorsvc.sh  execjava.sh               listsubjectdns.sh         restutil.sh     runwuctuningtool.sh
+agent.sh         agentupgradephase2.sh     classpath.sh            connectorup.sh   flexagentwizard.sh        logfu.sh                  runcertutil.sh  tempca.sh
+agents.sh        agentupgrader.sh          connectorsetup.sh       csvconvert.sh    jvmcommonparams.sh        mergeCustomProperties.sh  runjava.sh      upgraderollback.sh
