@@ -1,0 +1,25 @@
+#
+## Multi-Threading ##
+#
+
+## Syslog parser multithreading
+syslog.parser.threadcount=4
+syslog.parser.multithreading.enabled=true
+
+## Faster cache clearing
+## NOTE: if you are noticing that your syslog Connector seems to be 'up but not doing anything' and has a cache, don't panic and \
+## act on that by trying to stop and start it again as it will only simply try to validate the cache count on each restart. If   \
+## truly want the Connector up ASAP and are carrying cache backlogs then this property will help.   
+eventcache.scanforsize=false
+http.transport.queuesize=8000
+
+## Logger transport multithreading
+transport.loggersecure.connection.persistent=true
+transport.loggersecure.multithreaded=true
+transport.loggersecure.threads=4
+
+## ESM Transport multithreading
+eventcache.scanforsize=false
+http.transport.queuesize=8000
+http.transport.multithreaded=true
+http.transport.threadcount=4
