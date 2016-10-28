@@ -1,6 +1,8 @@
 #
 ## Multi-Threading ##
 #
+# Links:
+# https://www.protect724.hpe.com/groups/esm-performance/blog/2016/01/14/a-killer-option-that-will-force-your-connectors-to-get-rid-of-the-caching?commentID=14822%23comment-14822
 
 ## Syslog parser multithreading
 syslog.parser.threadcount=4
@@ -23,3 +25,27 @@ eventcache.scanforsize=false
 http.transport.queuesize=8000
 http.transport.multithreaded=true
 http.transport.threadcount=4
+
+#
+## Event Cache
+#
+
+1) If you have too much pre-processing cache, adjust these options:
+ 
+agents[0].filequeuemaxfilecount=100
+agents[0].filequeuemaxfilesize=10000000
+syslog.parser.multithreading.enabled=true
+syslog.parser.threadcount=4
+
+2) If you have too much post-processing cache, adjust these options:
+ 
+For ESM destination:
+http.transport.multithreaded=true
+http.transport.threadcount=4
+http.transport.queuesize=8000
+eventcache.scanforsize=false
+ 
+For Logger destination:
+transport.loggersecure.multithreaded=true
+transport.loggersecure.threads=4
+eventcache.scanforsize=false
