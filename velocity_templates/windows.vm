@@ -1,0 +1,19 @@
+## Created by Mattd
+## custom/malware.vm
+
+Description: $introspector.getDisplayValue($event, "name")
+Name: $introspector.getDisplayValue($event,"name")
+
+-------------
+System Info
+-------------
+End Time                :$introspector.getDisplayValue($event,"endTime")
+Source HostName :$introspector.getDisplayValue($event,"sourceHostName")
+Destination HostName    :$introspector.getDisplayValue($event,"destinationHostName")
+Location    :$introspector.getDisplayValue($event,"sourceZoneName")
+
+-------------
+User Info
+-------------
+Source User Name        :$introspector.getDisplayValue($event,"sourceUserName")
+Destination User Name   :$introspector.getDisplayValue($event,"destinationUserName")
