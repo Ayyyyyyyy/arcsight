@@ -1,0 +1,64 @@
+############################################################################
+# Syslog Flex Connector Template
+# Name:
+# Version: 1.0
+# Created by:
+# Date:
+# Flex Connector file name:
+#############################################################################
+# Revisions
+#
+#############################################################################
+## Sample Log
+# PASTE HERE
+ 
+do.unparsed.events=true
+ 
+regex= MAKE SURE YOU DOUBLE BACKSLASH IN YOUR REGEX!! (\\)
+ 
+token.count=4
+ 
+token[0].name=
+token[0].type=String
+token[1].name=
+token[1].type=String
+token[2].name=
+token[2].type=TimeStamp
+token[3].name=
+token[3].type=String
+ 
+#
+## EVENTS
+#
+ 
+event.deviceVendor=__stringConstant("")
+event.deviceProduct=__stringConstant("")
+event.deviceVersion=
+event.endTime= 
+event.name=__stringConstant("")
+event.message=
+ 
+#
+## CUSTOM VERSION (I use this for troubleshooting)
+#
+
+event.deviceCustomString6=__stringConstant("")
+event.deviceCustomString6Label=__stringConstant("Flex Version")
+ 
+#
+## CATEGORIZATION
+#
+ 
+#event.categoryDeviceGroup=__stringConstant("/Operating System")
+#event.categoryObject=__stringConstant("/Host/Operating System")
+#event.categorySignificance=__stringConstant("/Informational")
+#event.categoryBehavior=__stringConstant("")
+#event.categoryTechnique=__concatenate("/Traffic Anomaly/",Name)
+ 
+#
+## SEVERITY
+#
+ 
+#severity.map.high.if.deviceSeverity=High
+#severity.map.medium.if.deviceSeverity=
+#severity.map.low.if.deviceSeverity=
