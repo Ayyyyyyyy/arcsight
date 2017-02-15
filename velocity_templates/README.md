@@ -1,8 +1,12 @@
 
 # ArcSight_Velocity
-Velocity Templates in ESM.
+### Additional resources
++ http://velocity.apache.org/engine/1.7/user-guide.html#variables
++ http://docs.oracle.com/javase/7/docs/api/java/lang/String.html
 
-Step 1: Create new directory in your ESM's notification directory (eg "/opt/arcsight/manager/config/notification")
+#### Velocity templates for email notifications in ESM
+
+Step 1: Create new directory in your ESM's notification directory (eg: `/opt/arcsight/manager/config/notification/custom`)
 
 Step 2: Navigate into the new directory, and create a new vm (or re-use newtemplate.vm) for a custom rule.
 
