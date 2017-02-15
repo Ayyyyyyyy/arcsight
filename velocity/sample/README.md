@@ -8,4 +8,4 @@
 
 ##### Customer URI check/replace
 
-```#if($deviceHostName.endsWith("uhc.com"))/AllCustomers/CORP#elseif($deviceHostName.endsWith(""))/All Customers/NONE#elseif($agentHostName.endsWith("uhc.com"))/All Customers/CORP#end```
+```#if($deviceHostName.endsWith("test.com"))/AllCustomers/TEST#elseif($agentHostName.endsWith("test.com"))/All Customers/CORP#end```
