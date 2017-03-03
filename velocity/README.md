@@ -8,3 +8,4 @@
 Simple use of the velocity template notification vm's provided by arcsight.
 
 #### sample - velocity samples. 
+This includes items like custom columns inb active lists/channels.
