@@ -34,17 +34,16 @@ http.transport.threadcount=4
 
 ## Event Cache
 
-+ If you have too much pre-processing cache, adjust these options:
+### If you have too much pre-processing cache, adjust these options:
 ```
 agents[0].filequeuemaxfilecount=100
 agents[0].filequeuemaxfilesize=10000000
 syslog.parser.multithreading.enabled=true
 syslog.parser.threadcount=4
 ```
-
-+ If you have too much post-processing cache, adjust these options:
+### If you have too much post-processing cache, adjust these options:
  
-#### For ESM destination:
+##### For ESM destination:
 ```
 http.transport.multithreaded=true
 http.transport.threadcount=4
@@ -52,7 +51,7 @@ http.transport.queuesize=8000
 eventcache.scanforsize=false
 ```
 
-#### For Logger destination:
+##### For Logger destination:
 ```
 transport.loggersecure.multithreaded=true
 transport.loggersecure.threads=4
