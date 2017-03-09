@@ -12,7 +12,6 @@ This includes items like custom columns inb active lists/channels.
 
 
 # Velocity Email
-======
 
 ### Velocity templates for email notifications in ESM  
 **Step 1:** Create new directory in your ESM's notification directory (eg: `/opt/arcsight/manager/config/notification/custom`)  
@@ -104,7 +103,6 @@ THIS WAS A FAILURE!
 ```
 
 # Velocity Examples
-======
 
 ### Customer URI check/replace
 ```javascript
@@ -203,4 +201,6 @@ Source Address: $sIP
 Dest Address: $dIP
 $divider
 ```
+#### Example
+![alt text](https://github.com/Ayyyyyyyy/arcsight/blob/master/img/velocity_case.png "velocity_case.png")
 
