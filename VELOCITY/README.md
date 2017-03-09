@@ -161,12 +161,12 @@ THIS WAS A FAILURE!
 
 #### This can be used to create a template for all cases created by arcsight.
 + Create a global variable and name it whatever you like
-+ Select the *velocity template* argument
++ Select the **velocity template** argument
 + Insert the code below along with whatever other fields you'd like to pass along to each case.
 
-**Note** Make sure you aggregate this global variable and any other variables you plan to reference in each rule you want to use this in otherwise it won't work.  
+**Note:** Make sure you aggregate this global variable and any other variables you plan to reference in each rule you want to use this in otherwise it won't work.  
 
-```
+```javascript
 ## Custom velocity to display specific events in case text areas.
 ## Made by: Matt DeVries
 ## Date: 3.8.17
