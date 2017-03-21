@@ -1,0 +1,16 @@
+## Created by Mattd
+## custom/Newtemplate.vm
+
+Name: $introspector.getDisplayValue($event,"name")
+----
+End Time                      :$introspector.getDisplayValue($event,"endTime")
+Device Severity               :$introspector.getDisplayValue($event,"deviceSeverity")
+Device HostName               :$introspector.getDisplayValue($event,"deviceHostName")
+Device Process                :$introspector.getDisplayValue($event,"deviceProcessName")
+Source User ID                :$introspector.getDisplayValue($event,"sourceUserId")
+Destination User Name         :$introspector.getDisplayValue($event,"destinationUserName")
+Destination Address           :$introspector.getDisplayValue($event,"destinationAddress")
+Destination Host              :$introspector.getDisplayValue($event,"destinationHostName")
+Destination Zone              :$introspector.getDisplayValue($event,"destinationZoneResource")
+----
+EventID 					            :$introspector.getDisplayValue($event,"externalId")

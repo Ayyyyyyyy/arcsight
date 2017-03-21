@@ -1,0 +1,16 @@
+## Created by Mattd.
+## Email.vm
+## This essentially crawls down the list of events until it matches the flexString1 field.    \
+## Once the match takes place, it will reference the next template you created for said event.\
+## If it doesn't match any of the custom templates, there is a catchall called 'fail.vm' that \
+## literally says "THIS WAS A FAILURE" - you can obviously change this, but you get the point.\
+
+#if($introspector.getDisplayValue($event, "flexString1") == "malware")
+#parse ("custom/malware.vm")
+#elseif ($introspector.getDisplayValue($event, "flexString1") == "windows")
+#parse ("custom/windows.vm")
+#elseif ($introspector.getDisplayValue($event, "flexString1") == "newTemplate")
+#parse ("custom/newtemplate.vm")
+#else
+#parse ("custom/fail.vm")
+#end
