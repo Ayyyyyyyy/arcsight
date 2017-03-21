@@ -17,10 +17,10 @@ This includes utilizing velocity in a global or local variable to provide your c
 # Notifications
 
 ### Velocity templates for email notifications in ESM
-**Step 1:** Create new directory in your ESM's notification directory (eg: `/opt/arcsight/manager/config/notification/custom`)
-**Step 2:** Navigate into the new directory, and create a new vm (or re-use newtemplate.vm) for a custom rule.
-**Step 3:** Customize the Email.vm template to reference the new template file you created in step 2.
-**Step 4:** All set - The manager DOES NOT require a restart when you make changes to these templates.
+1. Create new directory in your ESM's notification directory (eg: `/opt/arcsight/manager/config/notification/custom`)
+2. Navigate into the new directory, and create a new vm (or re-use newtemplate.vm) for a custom rule.
+3. Customize the Email.vm template to reference the new template file you created in step 2.
+4. All set - The manager DOES NOT require a restart when you make changes to these templates.
 
 # Text Enhancement
 
