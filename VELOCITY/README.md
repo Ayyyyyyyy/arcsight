@@ -1,108 +1,28 @@
-
-# ArcSight_Velocity
-### Additional resources
+# Velocity in ArcSight
+### Resources
 + http://velocity.apache.org/engine/1.7/user-guide.html#variables
 + http://docs.oracle.com/javase/7/docs/api/java/lang/String.html
 
-#### email - Velocity templates for email notifications in ESM.
+## Use Cases
+
+#### Notifications - Velocity templates for email notifications in ESM.
 Simple use of the velocity template notification vm's provided by arcsight.
 
-#### sample - velocity samples. 
-This includes items like custom columns inb active lists/channels.
+#### Text Enhancement
+This includes items like custom columns in active lists/channels, reports, and even overrides for the report archive folder.
 
+#### Text Insertion
+This includes utilizing velocity in a global or local variable to provide your case or rules additional data.  
 
-# Velocity Email
+# Notifications
 
-### Velocity templates for email notifications in ESM  
-**Step 1:** Create new directory in your ESM's notification directory (eg: `/opt/arcsight/manager/config/notification/custom`)  
-**Step 2:** Navigate into the new directory, and create a new vm (or re-use newtemplate.vm) for a custom rule.  
-**Step 3:** Customize the Email.vm template to reference the new template file you created in step 2.  
+### Velocity templates for email notifications in ESM
+**Step 1:** Create new directory in your ESM's notification directory (eg: `/opt/arcsight/manager/config/notification/custom`)
+**Step 2:** Navigate into the new directory, and create a new vm (or re-use newtemplate.vm) for a custom rule.
+**Step 3:** Customize the Email.vm template to reference the new template file you created in step 2.
 **Step 4:** All set - The manager DOES NOT require a restart when you make changes to these templates.
 
-#### Email.vm
-```
-## Created by Mattd.
-## This essentially crawls down the list of events until it matches the flexString1 field.    \
-## Once the match takes place, it will reference the next template you created for said event.\
-## If it doesn't match any of the custom templates, there is a catchall called 'fail.vm' that \
-## literally says "THIS WAS A FAILURE" - you can obviously change this, but you get the point.\
-
-#if($introspector.getDisplayValue($event, "flexString1") == "malware")
-#parse ("custom/malware.vm")
-#elseif ($introspector.getDisplayValue($event, "flexString1") == "windows")
-#parse ("custom/windows.vm")
-#elseif ($introspector.getDisplayValue($event, "flexString1") == "newTemplate")
-#parse ("custom/newtemplate.vm")
-#else
-#parse ("custom/fail.vm")
-#end
-```
-####  Malware.vm
-```
-## Malware.vm
-
-Name: $introspector.getDisplayValue($event,"name")
-
--------------
-System Info
--------------
-End Time                :$introspector.getDisplayValue($event,"endTime")
-Source HostName :$introspector.getDisplayValue($event,"sourceHostName")
-Destination HostName    :$introspector.getDisplayValue($event,"destinationHostName")
-
--------------
-User Info
--------------
-Source User Name        :$introspector.getDisplayValue($event,"sourceUserName")
-Destination User Name   :$introspector.getDisplayValue($event,"destinationUserName")
-```
-#### Windows.vm
-```
-## Created by Mattd
-## custom/Windows.vm
-
-Description: $introspector.getDisplayValue($event, "name")
-Name: $introspector.getDisplayValue($event,"name")
-
--------------
-System Info
--------------
-End Time                :$introspector.getDisplayValue($event,"endTime")
-Source HostName :$introspector.getDisplayValue($event,"sourceHostName")
-Destination HostName    :$introspector.getDisplayValue($event,"destinationHostName")
-Location    :$introspector.getDisplayValue($event,"sourceZoneName")
-
--------------
-User Info
--------------
-Source User Name        :$introspector.getDisplayValue($event,"sourceUserName")
-Destination User Name   :$introspector.getDisplayValue($event,"destinationUserName")
-```
-#### Newtemplate.vm
-```
-## Created by Mattd
-## custom/newtemplate.vm
-
-Name: $introspector.getDisplayValue($event,"name")
-----
-End Time                      :$introspector.getDisplayValue($event,"endTime")
-Device Severity               :$introspector.getDisplayValue($event,"deviceSeverity")
-Device HostName               :$introspector.getDisplayValue($event,"deviceHostName")
-Device Process                :$introspector.getDisplayValue($event,"deviceProcessName")
-Source User ID                :$introspector.getDisplayValue($event,"sourceUserId")
-Destination User Name         :$introspector.getDisplayValue($event,"destinationUserName")
-Destination Address           :$introspector.getDisplayValue($event,"destinationAddress")
-Destination Host              :$introspector.getDisplayValue($event,"destinationHostName")
-Destination Zone              :$introspector.getDisplayValue($event,"destinationZoneResource")
-----
-EventID 					            :$introspector.getDisplayValue($event,"externalId")
-```
-#### Fail.vm
-```
-THIS WAS A FAILURE!
-```
-
-# Velocity Examples
+# Text Enhancement
 
 ### Customer URI check/replace
 ```javascript
@@ -145,10 +65,10 @@ THIS WAS A FAILURE!
 <!-- MRT: TimeStamp | sourceAddress | destinationAddress | hostname | Name -->
     <span>
         <strong><font color="$red">MRT: </font></strong> $MRT  |
-        <strong><font color="$iRed"> $sIP </font></strong> | 
+        <strong><font color="$iRed"> $sIP </font></strong> |
         <strong><font color="$crl"> $dIP </font></strong> |
         <strong><font color="$lSalmon"> hostnamehere </font></strong> |
-        $name 
+        $name
     </span>
 </html>
 ```
@@ -162,7 +82,7 @@ THIS WAS A FAILURE!
 + Select the **velocity template** argument
 + Insert the code below along with whatever other fields you'd like to pass along to each case.
 
-**Note:** Make sure you aggregate this global variable and any other variables you plan to reference in each rule you want to use this in otherwise it won't work.  
+**Note:** Make sure you aggregate this global variable and any other variables you plan to reference in each rule you want to use this in otherwise it won't work.
 
 ```javascript
 ## Custom velocity to display specific events in case text areas.
@@ -186,7 +106,7 @@ THIS WAS A FAILURE!
 $caseDetails
 Business Segment: $BSName
 Business Unit URI: $customerURI
-Use Case Display ID: 
+Use Case Display ID:
 Use Case Name: $eID
 Description of Alert:
 $divider
@@ -194,7 +114,7 @@ $newline
 $eventDetails
 Manager Receipt Time: $mrt
 Event Time: $ent
-Device Vendor: $deviceVendor  
+Device Vendor: $deviceVendor
 Device Product: $deviceProduct
 UserName: $sUser
 Source Address: $sIP
@@ -203,4 +123,3 @@ $divider
 ```
 #### Example
 ![alt text](https://github.com/Ayyyyyyyy/arcsight/blob/master/img/velocity_case.png "velocity_case.png")
-
