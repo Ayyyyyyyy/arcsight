@@ -1,0 +1,162 @@
+## Name:        gvCaseInfo
+## Version:     1.0
+## Creator:     Matt DeVries
+## 
+### // Required Case Information //
+##
+#set( $rule = $name)
+#set( $BSName = $customerName.toUpperCase())
+#set( $BSURI = $customerURI)
+#set( $eID = $eventId)
+#set( $corr = $correlatedEventCount)
+#set( $mssg = $message)
+##
+## -- Time Details
+##
+#set( $ET = $endTime)
+#set( $MRT = $managerReceiptTime)
+#set( $ENT = $endTime)
+#set( $ART = $agentReceiptTime)
+##
+## -- Device Details
+##
+#set( $devHost = $deviceHostName)
+#set( $devZName = $deviceZoneName)
+#set( $devIP = $deviceAddress)
+#set( $devDNS = $deviceDnsDomain)
+#set( $DV = $deviceVendor)
+#set( $DP = $deviceProduct)
+#set( $dEventId = $deviceEventClassId)
+#set( $dAction = $deviceAction)
+##
+## -- Host Details
+##
+#set( $sIP = $sourceAddress)
+#set( $sHost = $sourceHostName)
+#set( $sPort = $sourcePort)
+#set( $sMAC = $sourceMacAddress)
+#set( $sDNS = $sourceDnsDomain)
+#set( $sNTDomain = $sourceNtDomain)
+#set( $sZName = $sourceZoneName)
+#set( $sTransIP = $sourceTranslatedAddress)
+#set( $dIP = $destinationAddress)
+#set( $dHost = $destinationHostName)
+#set( $dPort = $destinationPort)
+#set( $dMAC = $destinationMacAddress)
+#set( $dDNS = $destinationDnsDomain)
+#set( $dNTDomain = $destinationNtDomain)
+#set( $dZName = $destinationZoneName)
+#set( $dTransIP = $destinationTranslatedAddress)
+##
+## -- User Details
+##
+#set( $sUserName = $sourceUserName.toUpperCase())
+#set( $sUserID = $sourceUserId.toUpperCase())
+#set( $dUserName = $destinationUserName.toUpperCase())
+#set( $dUserID = $destinationUserId.toUpperCase())
+##
+## -- Markdown
+##
+#set( $divider = "========================================")
+#set( $newLine = "")
+##
+## // Start Case Details //
+##
+// ----- Case Details ----- //
+Originating ESM: $flexNumber1
+Business Segment: $BSName
+Business Unit URI: $BSURI
+Use Case Name: $rule
+Description of Alert: $mssg
+Originating eventID: $eID 
+$newLine
+// ----- Event Details ----- //
+Manager Receipt Time: $MRT
+Event Time: $ET
+Correlated: $corr
+Device Vendor: $DV  
+Device Product: $DP
+Device Host: $devHost
+Device Address: $devIP
+Device Class ID: $dEventId
+Device Action: $dAction
+$newLine
+// ----- Host Details ----- //
+Source Host: $sHost
+Source Address: $sIP
+Source Domain: $sDNS
+Source User Name: $sUserName
+Source UID: $sUserID
+Source Port: $sPort
+Source Zone: $sZName
+$newLine
+Dest. Host: $dHost
+Dest. Address: $dIP
+Dest. Domain: $dDNS
+Dest. User: $dUserName
+Dest. UID: $dUserID
+Dest. Port: $dPort
+Dest. Zone: $dZName
+$divider
+$newLine
+$lvCategory
+
+//-------------------------------------//
+//  Local Variables within gvCaseInfo  //
+//-------------------------------------//
+
+## Name:        ARC
+## Version:     1.0
+## Creator:     Matt DeVries
+##
+## // Resource Details //
+##
+#set( $fName = $fileName)
+#set( $fPath = $filePath)
+#set( $fType = $fileType)
+// ----- Resource Details ----- //
+Resource Name: $fName
+Resource Type: $fType
+Resource Path: $fPath
+
+//-------------------------------------//
+
+## Name:        FAIL
+## Version:     1.0
+## Creator:     Matt DeVries
+## Note:        Can also be a GV - use 'alias' to reference...
+……………………………………..________
+………………………………,.-‘”……………….“~.,
+………………………..,.-“……………………………..”-.,
+…………………….,/………………………………………..”:,
+…………………,?………………………………………………\,
+………………./…………………………………………………..,}
+……………../………………………………………………,:`^`..}
+……………/……………………………………………,:”………/
+…………..?…..__…………………………………..:`………../
+…………./__.(…..”~-,_…………………………,:`………./
+………../(_….”~,_……..”~,_………………..,:`…….._/
+……….{.._$;_……”=,_…….”-,_…….,.-~-,},.~”;/….}
+………..((…..*~_…….”=-._……”;,,./`…./”…………../
+…,,,___.\`~,……”~.,………………..`…..}…………../
+…………(….`=-,,…….`……………………(……;_,,-”
+…………/.`~,……`-………………………….\……/\
+………….\`~.*-,……………………………….|,./…..\,__
+,,_……….}.>-._\……………………………..|…………..`=~-,
+…..`=~-,_\_……`\,……………………………\
+……………….`=~-,,.\,………………………….\
+…………………………..`:,,………………………`\…………..__
+……………………………….`=-,……………….,%`>–==“
+…………………………………._\……….._,-%…….`\
+……………………………..,<`.._|_,-&“…………….`
+
+//-------------------------------------//
+
+## Name:        lvCategory
+## Version:     1.0
+## Creator:     Matt DeVries
+#if ($name == "Rule deleted" || $name == "Filter deleted")
+$lvArc
+#else 
+$FAIL
+#end
