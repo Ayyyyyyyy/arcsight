@@ -1,8 +1,9 @@
 # Velocity in ArcSight
 ### Resources
-+ http://velocity.apache.org/engine/1.7/user-guide.html#variables
-+ http://docs.oracle.com/javase/7/docs/api/java/lang/String.html
-
++ [Velocity Variables](http://velocity.apache.org/engine/1.7/user-guide.html#variables)
++ [Java Strings](http://docs.oracle.com/javase/7/docs/api/java/lang/String.html)
++ [Java Regex Patterns](http://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html)
++ [Java Regex Testing](http://java-regex-tester.appspot.com/)
 ## Use Cases
 
 #### Notifications - Velocity templates for email notifications in ESM.
