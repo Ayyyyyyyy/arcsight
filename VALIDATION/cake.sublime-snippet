@@ -1,0 +1,53 @@
+<snippet>
+	<content><![CDATA[
+## Rule: ${1}
+## Test By: ${2}
+## Date: ${3}
+
+## Sample of events go here
+
+== SECTION 1 : Global parameters
+separator:,
+
+== SECTION 2 : Header
+cefversion:0
+devicevendor:${4}
+deviceproduct:${5}
+deviceversion:${6}
+signatureid:${7}
+name:${8}
+severity:${9}
+
+== SECTION 3 : Optional CEF fields
+flexNumber1:2
+flexString2:CAKE TEST - Rule Name Here
+_cefVer:0.1
+src:[10.1.1.1:10.2.255.255]
+dst:[199.99.99.99:199.99.99.255]
+priority:
+suid:
+suser:
+dpt:
+duser:
+request:
+requestMethod:
+act:
+#cs1:
+#cs1Label:
+#cs2:
+#cs2Label:
+#cs3:
+#cs3Label:
+#cs4:
+#cs4Label:
+#cs5:
+#cs4Label:
+#cs6:
+#cs6Label:
+#categoryOutcome:/Failure
+#categorySignificance:/Informational/Warning
+#categoryDeviceGroup:/Application
+#categoryDeviceType:Web Filtering
+]]></content>
+<tabTrigger>CAKE</tabTrigger>
+</snippet>
