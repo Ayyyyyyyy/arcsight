@@ -1,0 +1,20 @@
+ on 6.9.1 Install for centOS (7.2.1611)
+### Edit/Change the centos-release
+
+Change the version from __7.2.1611__ to __7.1.1511__
+```javascript
+vim /etc/centos-release
+```
+```javascript
+CentOS Linux release 7.1.1511 (Core)
+```
+### Add additional YUM packages
+##### Compatibility Libraries
+```javascript
+ yum groupinstall "Compatibility Libraries"
+ ```
+ ##### Dev Tools
+```javascript
+ yum groupinstall "Development Tools"
+ ```
+To Be Continued...
