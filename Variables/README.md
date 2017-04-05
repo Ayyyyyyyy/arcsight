@@ -2,6 +2,7 @@
 ### Resources
 + [Velocity Variables](http://velocity.apache.org/engine/1.7/user-guide.html#variables)
 + [Java Strings](http://docs.oracle.com/javase/7/docs/api/java/lang/String.html)
++ [Java Methods](http://docs.oracle.com/javase/7/docs/api/java/lang/String.html#method_summary)
 + [Java Regex Patterns](http://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html)
 + [Java Regex Testing](http://java-regex-tester.appspot.com/)
 ## Use Cases
