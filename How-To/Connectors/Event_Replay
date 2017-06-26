@@ -1,7 +1,5 @@
 # How to convert .csv to .event file for replay
 
-#### From the bin directory of your connector installation...
+## From the bin directory of your connector installation...
 
-```javascript
-./arcsight.bat agent csvconvert -S C:/Users/mdevries/Desktop/Apps/ArcSight/PALO/393_Palo_Threat.csv -D 393_Palo_Threat.events
-```
+./arcsight.bat agent csvconvert -S C:/Users/user/Desktop/Apps/ArcSight/DIR/convert.csv -D convert.events
