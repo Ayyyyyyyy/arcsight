@@ -1,7 +1,21 @@
 # Documentation and How To's
 This section will contain documentation and how to articles that pertain to arcsight.
-# Logger Queries(placeholder for now - still need to create it's own page.)
-## General
+# 
+# Logger
+## Web GUI
+#### Top Agent Version Count
+```sql
+deviceProduct=ArcSight | rex "av=(?<av>[^\s]+)\s" | top av
+```
+#### Top agentTimeZone 
+```sql
+deviceProduct=ArcSight |  rex "atz=(?<agentTimeZone>[^\s]+)\s" | where agentTimeZone != "UTC" | top sourceHostName
+```
+#### Logger - Bytes to GB eval
+```sql
+sourceAddress IS NOT NULL AND bytesIn >0 | chart sum(bytesIn) as BI by sourceAddress | eval kbi=BI/1000 | eval mbi=BI/1000000
+```
+## Query Based
 #### Data Use (Daily)
 ```sql
 SELECT
