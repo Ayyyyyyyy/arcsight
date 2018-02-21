@@ -1,0 +1,47 @@
+event.deviceEventClassId,set.event.categorySignificance,set.event.categoryBehavior,set.event.categoryDeviceGroup,set.event.categoryObject,set.event.categoryTechnique,set.event.categoryOutcome
+20,/Suspicious,/Communicate/Response,/IDS/Network,/Host/Application/Service,/Traffic Anomaly/Application Layer,/Success
+33,/Suspicious,/Communicate/Query,/IDS/Network,/Host/Application/Service,/Traffic Anomaly/Application Layer,/Success
+40,/Suspicious,/Found,/IDS/Network,/Host/Application/Service,/Traffic Anomaly/Application Layer,/Success
+43,/Suspicious,/Found,/IDS/Network,/Host/Application/Service/Email,/Traffic Anomaly/Application Layer,/Success
+52,/Suspicious,/Communicate/Query,/IDS/Network,/Host/Application/Service,,/Success
+230,/Suspicious,/Communicate/Query,/IDS/Network,/Host/Application/Service,/Traffic Anomaly/Application Layer,/Success
+470,/Suspicious,/Communicate/Query,/IDS/Network,/Host/Application/Service,/Traffic Anomaly/Application Layer,/Success
+554,/Informational,/Authentication,/IDS/Network,/Host/Application/Database,,/Success
+555,/Informational,/Authentication,/IDS/Network,/Host/Application/Database,,/Failure
+559,/Informational,/Authentication,/IDS/Network,/Host/Application/Database,,/Success
+564,/Suspicious,/Communicate/Response,/IDS/Network,/Host/Application/Service,/Traffic Anomaly/Application Layer,/Success
+574,/Informational,/Authentication,/IDS/Network,/Host/Application/Database,,/Failure
+611,/Suspicious,/Communicate/Query,/IDS/Network,/Host/Application/Service,/Information Leak,/Success
+706,/Suspicious,/Found,/IDS/Network,/Host/Application/Service,,/Success
+719,/Suspicious,/Found,/IDS/Network,/Host/Application/Service,,/Success
+1490,/Suspicious,/Communicate/Response,/IDS/Network,/Host/Application/Service,/Traffic Anomaly/Application Layer,/Success
+1531,/Hostile,/Communicate/Query,/IDS/Network,/Host/Application/Service,/Traffic Anomaly/Application Layer,/Success
+1537,/Informational,/Authentication,/IDS/Network,/Host/Application/Service,,/Failure
+1645,/Suspicious,/Communicate/Query,/IDS/Network,/Host/Application/Service,/Traffic Anomaly/Application Layer,/Success
+1812,/Suspicious,/Found,/IDS/Network,/Host/Application/Service,,/Success
+1835,/Suspicious,/Communicate/Response,/IDS/Network,/Host/Application/Service,/Traffic Anomaly/Application Layer,/Success
+2184,/Informational,/Authentication,/IDS/Network,/Host/Application/Service/Remote Control,,/Success
+2184,/Informational,/Authentication,/IDS/Network,/Host/Application/Service/Remote Control,,/Success
+2289,/Informational,/Authentication,/IDS/Network,/Host/Application/Service,,/Failure
+2310,/Suspicious,/Execute/Start,/IDS/Network,/Host/Application/Service,/Traffic Anomaly/IDS Evasion,/Success
+2357,/Hostile,/Communicate/Query,/IDS/Network,/Host/Application/Service,/Traffic Anomaly/Application Layer,/Success
+2388,/Informational,/Authentication,/IDS/Network,/Host/Application/Service/Remote Control,,/Failure
+2399,/Suspicious,/Execute/Start,/IDS/Network,/Host/Application/Service,/Traffic Anomaly/Application Layer,/Success
+100101,/Suspicious,/Communicate/Query,/IDS/Network,/Host/Application/Service/Email,,/Success
+100101,/Suspicious,/Communicate/Query,/IDS/Network,/Host/Application/Service,,/Success
+100101,/Suspicious,/Communicate/Query,/IDS/Network,/Host/Application/Service/Email,,/Success
+100120,/Informational,/Communicate,/IDS/Network,/Host/Application/Service,,/Success
+200119,/Informational,/Communicate,/IDS/Network,/Host/Application/Service,,/Success
+200120,/Informational,/Communicate,/IDS/Network,/Host/Application/Service,,/Success
+200127,/Informational,/Communicate,/IDS/Network,/Host/Application/Service,,/Success
+300102,/Informational,/Communicate,/IDS/Network,/Host/Application/Service,,/Success
+300102,/Informational,/Communicate,/IDS/Network,/Host/Application/Service,,/Success
+300102,/Informational,/Communicate,/IDS/Network,/Host/Application/Service,,/Success
+300102,/Informational,/Communicate,/IDS/Network,/Host/Application/Service,,/Success
+300102,/Informational,/Communicate,/IDS/Network,/Host/Application/Service,,/Success
+300102,/Informational,/Communicate,/IDS/Network,/Host/Application/Service,,/Success
+300102,/Informational,/Communicate,/IDS/Network,/Host/Application/Service,,/Success
+300102,/Informational,/Communicate,/IDS/Network,/Host/Application/Service,,/Success
+300999,/Informational,/Communicate,/IDS/Network,/Host/Application/Service,,/Success
+300999,/Informational,/Communicate,/IDS/Network,/Host/Application/Service,,/Success
+300999,/Informational,/Communicate,/IDS/Network,/Host/Application/Service,,/Success
