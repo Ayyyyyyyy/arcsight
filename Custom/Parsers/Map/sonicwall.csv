@@ -1,0 +1,22 @@
+event.deviceEventClassId,set.event.categorySignificance,set.event.categoryBehavior,set.event.categoryDeviceGroup,set.event.categoryObject,set.event.categoryTechnique,set.event.categoryOutcome
+23,/Compromise,/Communicate/Query,/Firewall,/Host/Application/Service,/Traffic Anomaly/Network Layer/Spoof,/Failure
+36,/Suspicious,/Access,/Firewall,/Host/Application/Service,,/Failure
+37,/Suspicious,/Access,/Firewall,/Host/Application/Service,,/Failure
+38,/Suspicious,/Access,/Firewall,/Host/Application/Service,,/Failure
+82,/Recon,/Communicate/Query,/Firewall,/Host/Application/Service,/Scan/Port,/Attempt
+84,/Suspicious,/Communicate/Query,/Firewall,/Host/Application/Service,,/Failure
+97,/Informational,/Communicate/Query,/Firewall,/Host/Application/Service,,/Success
+98,/Informational,/Access,/Firewall,/Host/Application/Service,,/Success
+522,/Suspicious,/Access,/Firewall,/Host/Application/Service,,/Attempt
+526,/Informational,/Access,/Firewall,/Host/Application/Service,,/Success
+537,/Informational,/Access,/Firewall,/Host/Application/Service,,/Success
+1107,/Informational,/Access,/Firewall,/Host/Application/Service,,/Failure
+1154,/Informational,/Communicate/Query,/Firewall,/Host/Application/Service,,/Success
+1197,/Informational,/Communicate/Query,/Firewall,/Host/Application/Service,,/Success
+1230,/Informational,/Communicate/Query,/Firewall,/Host/Application/Service,,/Failure
+1231,/Informational,/Communicate/Query,/Firewall,/Host/Application/Service,,/Success
+1232,/Informational,/Communicate/Query,/Firewall,/Host/Application/Service,,/Success
+1233,/Suspicious,/Communicate/Query,/Firewall,/Host/Application/Service,,/Failure
+1254,/Suspicious,/Communicate/Query,/Firewall,/Host/Application/Service,,/Failure
+1257,/Suspicious,/Communicate/Query,/Firewall,/Host/Application/Service,,/Failure
+1430,/Informational,/Communicate/Query,/Firewall,/Host/Application/Service,,/Success
