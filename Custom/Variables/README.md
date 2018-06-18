@@ -27,7 +27,7 @@ This includes utilizing velocity in a global or local variable to provide your c
 # Text Enhancement
 
 ### File Name Extraction
-```javascript
+```
 #set ($sub1 = $fileName.lastIndexOf('/')+1)
 #set ($sub2 = $fileName.substring($sub1))
 #set ($sub3 = $fileName.lastIndexOf('\')+1)
@@ -38,8 +38,8 @@ $sub2.toLowerCase()
 $sub4.toLowerCase()
 #end
 ```
-Before: C:/Windows/System32/lsass.exe
-After: lsass.exe
++ Before: C:/Windows/System32/lsass.exe
++ After: lsass.exe
 
 ### Customer URI check/replace
 ```javascript
