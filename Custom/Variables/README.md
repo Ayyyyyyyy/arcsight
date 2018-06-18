@@ -26,6 +26,21 @@ This includes utilizing velocity in a global or local variable to provide your c
 
 # Text Enhancement
 
+### File Name Extraction
+```javascript
+#set ($sub1 = $fileName.lastIndexOf('/')+1)
+#set ($sub2 = $fileName.substring($sub1))
+#set ($sub3 = $fileName.lastIndexOf('\')+1)
+#set ($sub4 = $fileName.substring($sub3))
+#if ($fileName.contains('/'))
+$sub2.toLowerCase()
+#else
+$sub4.toLowerCase()
+#end
+```
+Before: C:/Windows/System32/lsass.exe
+After: lsass.exe
+
 ### Customer URI check/replace
 ```javascript
 #if($deviceHostName.endsWith("test.com"))/AllCustomers/TEST#elseif($agentHostName.endsWith("test.com"))/All Customers/CORP#end
