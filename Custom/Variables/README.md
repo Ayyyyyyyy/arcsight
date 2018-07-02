@@ -5,6 +5,7 @@
     - [Notifications](#-notifications)
     	- [Email](#-email)
     - [Text Enhancement](#-text-enhancement)
+    	- [Active Channel](#-active-channel)
     - [Text Insertion](#-text-insertion)
 - [Velocity Examples](#-velocity-examples)
 ## [↑](#content) Resources
@@ -24,10 +25,10 @@ Simple use of the velocity template notification vm's provided by arcsight.
 3. Customize the Email.vm template to reference the new template file you created in step 2.
 4. All set - The manager DOES NOT require a restart when you make changes to these templates.
 
-### [↑](#content) Text Enhancement
+## [↑](#content) Text Enhancement
 This includes items like custom columns in active lists/channels, reports, and even overrides for the report archive folder.
 
-#### Custom Text in Active Channel
+#### [↑](#content) Active Channel
 #####(Note: only tested in active channels and lists - testing cases next.)
 ```javascript
 ###########################
