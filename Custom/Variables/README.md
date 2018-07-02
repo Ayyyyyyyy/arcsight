@@ -14,10 +14,10 @@
 + [Java Regex Testing](http://java-regex-tester.appspot.com/)
 
 ## [↑](#content) Use Cases
-####  [↑](#content) Notifications
+###  [↑](#content) Notifications
 Simple use of the velocity template notification vm's provided by arcsight.
 
-### Velocity templates for email notifications in ESM
+#### Velocity templates for email notifications in ESM
 1. Create new directory in your ESM's notification directory (eg: `/opt/arcsight/manager/config/notification/custom`)
 2. Navigate into the new directory, and create a new vm (or re-use newtemplate.vm) for a custom rule.
 3. Customize the Email.vm template to reference the new template file you created in step 2.
