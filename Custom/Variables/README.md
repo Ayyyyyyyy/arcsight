@@ -71,6 +71,7 @@ This includes items like custom columns in active lists/channels, reports, and e
 ####  [↑](#content) File Name Extraction
 ```
 ## NOTE: Create using the "String > EvaluateVelocityTemplate" option as either a local or global variable.
+## ----------- Start Code ----------
 #set ($sub1 = $fileName.lastIndexOf('/')+1)
 #set ($sub2 = $fileName.substring($sub1))
 #set ($sub3 = $fileName.lastIndexOf('\')+1)
@@ -92,6 +93,7 @@ $sub4.toLowerCase()
 ## sub2 is the first "OU" after the user's name
 ## sub3 ties them together.
 ## \p{Punct} removes punctuation characters from the output.
+## ----------- Start Code ----------
 #set ($sub1 = $destinationUserId.indexOf('=')+1)
 #set ($sub2 = $destinationUserId.indexOf('OU'))
 #set ($sub3 = $destinationUserId.substring($sub1, $sub2))
