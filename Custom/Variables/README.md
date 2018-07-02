@@ -97,8 +97,8 @@ $sub4.toLowerCase()
 #set ($sub3 = $destinationUserId.substring($sub1, $sub2))
 $sub3.replaceAll('\p{Punct}', '').toLowerCase()
 ```
-+ Before: C:/Windows/System32/lsass.exe
-+ After: lsass.exe
++ Before: CN=Name\, User,OU=SN Auto Create,OU=FAKE,OU=Non-USER,DC=fake,DC=com
++ After: User
 
 ####  [↑](#content) URI Replacement
 ```javascript
