@@ -1,22 +1,21 @@
-# Velocity in ArcSight
-### Resources
+## Velocity Use In ArcSight
+## Content
+- [Resources](#-resources)
+- [Use Cases](#-use-cases)
+	- [Notifications](#-notifications)
+    - [Text Enhancement](#-text-enhancement)
+    - [Text Insertion](#-text-insertion)
+- [Velocity Examples](#-velocity-examples)
+## [↑](#content) Resources
 + [Velocity Variables](http://velocity.apache.org/engine/1.7/user-guide.html#variables)
 + [Java Strings](http://docs.oracle.com/javase/7/docs/api/java/lang/String.html)
 + [Java Methods](http://docs.oracle.com/javase/7/docs/api/java/lang/String.html#method_summary)
 + [Java Regex Patterns](http://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html)
 + [Java Regex Testing](http://java-regex-tester.appspot.com/)
-## Use Cases
 
-#### Notifications - Velocity templates for email notifications in ESM.
+## [↑](#content) Use Cases
+####  [↑](#content) Notifications
 Simple use of the velocity template notification vm's provided by arcsight.
-
-#### Text Enhancement
-This includes items like custom columns in active lists/channels, reports, and even overrides for the report archive folder.
-
-#### Text Insertion
-This includes utilizing velocity in a global or local variable to provide your case or rules additional data.  
-
-# Notifications
 
 ### Velocity templates for email notifications in ESM
 1. Create new directory in your ESM's notification directory (eg: `/opt/arcsight/manager/config/notification/custom`)
@@ -24,38 +23,10 @@ This includes utilizing velocity in a global or local variable to provide your c
 3. Customize the Email.vm template to reference the new template file you created in step 2.
 4. All set - The manager DOES NOT require a restart when you make changes to these templates.
 
-# Text Enhancement
+####  [↑](#content) Text Enhancement
+This includes items like custom columns in active lists/channels, reports, and even overrides for the report archive folder.
 
-### File Name Extraction
-```
-#set ($sub1 = $fileName.lastIndexOf('/')+1)
-#set ($sub2 = $fileName.substring($sub1))
-#set ($sub3 = $fileName.lastIndexOf('\')+1)
-#set ($sub4 = $fileName.substring($sub3))
-#if ($fileName.contains('/'))
-$sub2.toLowerCase()
-#else
-$sub4.toLowerCase()
-#end
-```
-+ Before: C:/Windows/System32/lsass.exe
-+ After: lsass.exe
-
-### Customer URI check/replace
-```javascript
-#if($deviceHostName.endsWith("test.com"))/AllCustomers/TEST#elseif($agentHostName.endsWith("test.com"))/All Customers/CORP#end
-```
-### Report Folder Structure
-###### Report Name: /2016/05/28/NameofReport_05-08-2016-14:00:00.pdf
-```javascript
-#set( $cyear=${CurrentMonth} )$cyear.substring(3)/#set( $cmnth=${CurrentMonth} )$cmnth.substring(0,2)/#set( $cday=${Today} )$cday.substring(3,5)/${ReportName}_${Now}
-```
-###### Other Options
-+ `#set( $cyear=${CurrentMonth} )$cyear.substring(3) = Year`
-+ `#set( $cmnth=${CurrentMonth} )$cmnth.substring(0,2) = Month`
-+ `#set( $cday=${Today} )$cday.substring(3,5) = Day`
-
-### Custom columns example
+### Custom Text in Active Channel
 #####(Note: only tested in active channels and lists - testing cases next.)
 ```javascript
 ###########################
@@ -92,7 +63,41 @@ $sub4.toLowerCase()
 #### Example
 ![alt text](https://github.com/Ayyyyyyyy/arcsight/blob/master/img/velocity_example1.png "velocity_example1.png")
 
-### ArcSight Case Creation Template
+
+####  [↑](#content) Text Insertion
+This includes utilizing velocity in a global or local variable to provide your case or rules additional data.  
+
+#### File Name Extraction
+```
+#set ($sub1 = $fileName.lastIndexOf('/')+1)
+#set ($sub2 = $fileName.substring($sub1))
+#set ($sub3 = $fileName.lastIndexOf('\')+1)
+#set ($sub4 = $fileName.substring($sub3))
+#if ($fileName.contains('/'))
+$sub2.toLowerCase()
+#else
+$sub4.toLowerCase()
+#end
+```
++ Before: C:/Windows/System32/lsass.exe
++ After: lsass.exe
+
+#### Customer URI check/replace
+```javascript
+#if($deviceHostName.endsWith("test.com"))/AllCustomers/TEST#elseif($agentHostName.endsWith("test.com"))/All Customers/CORP#end
+```
+#### Report Folder Structure
+###### Report Name: /2016/05/28/NameofReport_05-08-2016-14:00:00.pdf
+```javascript
+#set( $cyear=${CurrentMonth} )$cyear.substring(3)/#set( $cmnth=${CurrentMonth} )$cmnth.substring(0,2)/#set( $cday=${Today} )$cday.substring(3,5)/${ReportName}_${Now}
+```
+###### Other Options
++ `#set( $cyear=${CurrentMonth} )$cyear.substring(3) = Year`
++ `#set( $cmnth=${CurrentMonth} )$cmnth.substring(0,2) = Month`
++ `#set( $cday=${Today} )$cday.substring(3,5) = Day`
+
+
+#### ArcSight Case Creation Template
 
 #### This can be used to create a template for all cases created by arcsight.
 + Create a global variable and name it whatever you like
@@ -141,7 +146,7 @@ $divider
 #### Example
 ![alt text](https://github.com/Ayyyyyyyy/arcsight/blob/master/img/velocity_case.png "velocity_case.png")
 
-#### Velocity Examples
+## [↑](#content) Velocity Examples
 
 |String Token|String Result|
 |---|---|
