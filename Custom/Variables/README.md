@@ -2,7 +2,8 @@
 ## Content
 - [Resources](#-resources)
 - [Use Cases](#-use-cases)
-	- [Notifications](#-notifications)
+    - [Notifications](#-notifications)
+    	- [Email](#-email)
     - [Text Enhancement](#-text-enhancement)
     - [Text Insertion](#-text-insertion)
 - [Velocity Examples](#-velocity-examples)
@@ -17,16 +18,16 @@
 ###  [↑](#content) Notifications
 Simple use of the velocity template notification vm's provided by arcsight.
 
-#### Velocity templates for email notifications in ESM
+#### [↑](#content) Email
 1. Create new directory in your ESM's notification directory (eg: `/opt/arcsight/manager/config/notification/custom`)
 2. Navigate into the new directory, and create a new vm (or re-use newtemplate.vm) for a custom rule.
 3. Customize the Email.vm template to reference the new template file you created in step 2.
 4. All set - The manager DOES NOT require a restart when you make changes to these templates.
 
-####  [↑](#content) Text Enhancement
+### [↑](#content) Text Enhancement
 This includes items like custom columns in active lists/channels, reports, and even overrides for the report archive folder.
 
-### Custom Text in Active Channel
+#### Custom Text in Active Channel
 #####(Note: only tested in active channels and lists - testing cases next.)
 ```javascript
 ###########################
