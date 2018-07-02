@@ -4,9 +4,12 @@
 - [Use Cases](#-use-cases)
     - [Notifications](#-notifications)
     	- [Email](#-email)
-    - [Text Enhancement](#-text-enhancement)
+    - [Text Modification](#-text-modification)
     	- [Active Channel](#-active-channel)
-    - [Text Insertion](#-text-insertion)
+        - [File Name Insertion](#-file-name-insertion)
+        - [URI Replacement](#-uri-replacement)
+        - [Custom Report Archive Folder](#-custom-report-archive-folder)
+
 - [Velocity Examples](#-velocity-examples)
 ## [↑](#content) Resources
 + [Velocity Variables](http://velocity.apache.org/engine/1.7/user-guide.html#variables)
@@ -25,11 +28,10 @@ Simple use of the velocity template notification vm's provided by arcsight.
 3. Customize the Email.vm template to reference the new template file you created in step 2.
 4. All set - The manager DOES NOT require a restart when you make changes to these templates.
 
-## [↑](#content) Text Enhancement
+## [↑](#content) Text Modification
 This includes items like custom columns in active lists/channels, reports, and even overrides for the report archive folder.
 
 #### [↑](#content) Active Channel
-#####(Note: only tested in active channels and lists - testing cases next.)
 ```javascript
 ###########################
 ## Custom Velocity Template
@@ -65,11 +67,7 @@ This includes items like custom columns in active lists/channels, reports, and e
 #### Example
 ![alt text](https://github.com/Ayyyyyyyy/arcsight/blob/master/img/velocity_example1.png "velocity_example1.png")
 
-
-####  [↑](#content) Text Insertion
-This includes utilizing velocity in a global or local variable to provide your case or rules additional data.  
-
-#### File Name Extraction
+####  [↑](#content) File Name Extraction
 ```
 #set ($sub1 = $fileName.lastIndexOf('/')+1)
 #set ($sub2 = $fileName.substring($sub1))
@@ -84,15 +82,15 @@ $sub4.toLowerCase()
 + Before: C:/Windows/System32/lsass.exe
 + After: lsass.exe
 
-#### Customer URI check/replace
+####  [↑](#content) URI Replacement
 ```javascript
 #if($deviceHostName.endsWith("test.com"))/AllCustomers/TEST#elseif($agentHostName.endsWith("test.com"))/All Customers/CORP#end
 ```
-#### Report Folder Structure
-###### Report Name: /2016/05/28/NameofReport_05-08-2016-14:00:00.pdf
+####  [↑](#content) Custom Report Archive Folder
 ```javascript
 #set( $cyear=${CurrentMonth} )$cyear.substring(3)/#set( $cmnth=${CurrentMonth} )$cmnth.substring(0,2)/#set( $cday=${Today} )$cday.substring(3,5)/${ReportName}_${Now}
 ```
+Report Name: /2016/05/28/NameofReport_05-08-2016-14:00:00.pdf
 ###### Other Options
 + `#set( $cyear=${CurrentMonth} )$cyear.substring(3) = Year`
 + `#set( $cmnth=${CurrentMonth} )$cmnth.substring(0,2) = Month`
