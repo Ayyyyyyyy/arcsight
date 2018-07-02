@@ -10,6 +10,7 @@
         - [UserName Extraction](#-username-extraction)
         - [URI Replacement](#-uri-replacement)
         - [Custom Report Archive Folder](#-custom-report-archive-folder)
+    - [Case Template](#-case-template)
 
 - [Velocity Examples](#-velocity-examples)
 ## [↑](#content) Resources
@@ -71,6 +72,10 @@ This includes items like custom columns in active lists/channels, reports, and e
 ####  [↑](#content) File Name Extraction
 ```
 ## NOTE: Create using the "String > EvaluateVelocityTemplate" option as either a local or global variable.
+## sub1 is set if the filepath matches '/'
+## sub3 is set if the filepath matches '\'
+## if the filename comtains a '/', use sub2, otherwise sub4.
+## You don't have to include the 'toLowerCase()' option, but it helps if you're trying to be consistent.
 ## ----------- Start Code ----------
 #set ($sub1 = $fileName.lastIndexOf('/')+1)
 #set ($sub2 = $fileName.substring($sub1))
@@ -116,8 +121,7 @@ Report Name: /2016/05/28/NameofReport_05-08-2016-14:00:00.pdf
 + `#set( $cmnth=${CurrentMonth} )$cmnth.substring(0,2) = Month`
 + `#set( $cday=${Today} )$cday.substring(3,5) = Day`
 
-
-#### ArcSight Case Creation Template
+## [↑](#content) Case Template
 
 #### This can be used to create a template for all cases created by arcsight.
 + Create a global variable and name it whatever you like
