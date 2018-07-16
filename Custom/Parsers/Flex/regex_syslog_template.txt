@@ -42,8 +42,8 @@ event.message=
 ## CUSTOM VERSION (I use this for troubleshooting)
 #
 
-event.deviceCustomString6=__stringConstant("")
-event.deviceCustomString6Label=__stringConstant("Flex Version")
+event.flexString1=__stringConstant("")
+event.flexString1Label=__stringConstant("Flex Version")
  
 #
 ## CATEGORIZATION
