@@ -11,7 +11,8 @@
     - [Top agentTimeZone](#-top-agenttimezone)
     - [Bytes to GB evaluation](#-bytes-to-gb-evaluation)
     - [Lookup against a list](#-lookup-against-a-list)
-    
+- [Microsoft](#-microsoft)
+    - [Kerboroasting](#-kerboroasting)
     
 ## [↑](#content) Health
 #### [↑](#content) Device Health Check
@@ -54,4 +55,9 @@ sourceAddress IS NOT NULL AND bytesIn >0 | chart sum(bytesIn) as BI by sourceAdd
 #### [↑](#content) Lookup against a list
 ```sql
 deviceVendor="Palo Alto Networks" and name=TRAFFIC | lookup + LISTNAMEHERE IP_Address as destinationAddress
+```
+## [↑](#content) Microsoft
+#### [↑](#content) Kerboroasting
+```sql
+deviceProduct = "Microsoft Windows" AND deviceEventClassId = "Microsoft-Windows-Security-Auditing:4769" AND deviceSeverity != Audit_success AND NOT destinationServiceName CONTAINS "$" | rex "ad\.TicketEncryptionType=(?<TicketEncryptionType>[^\s] )\s" | rex "ad\.TicketOptions=(?<TicketOptions>[^\s] )\s" | WHERE TicketOptions = 0x40810000 AND TicketEncryptionType = 0x17 | top destinationUserName, destinationServiceName
 ```
