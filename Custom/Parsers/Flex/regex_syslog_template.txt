@@ -1,16 +1,12 @@
-############################################################################
-# Syslog Flex Connector Template
-# Name:
-# Version: 1.0
-# Created by:
-# Date:
-# Flex Connector file name:
-#############################################################################
-# Revisions
-#
-#############################################################################
-## Sample Log
-# PASTE HERE
+## Override title - Brief description of what this override is for.
+## Creator name
+## 8.23.18
+## v0.1
+## ----------
+## Directory: <CONNECTOR_HOME>/user/agent/flexagent/syslog_agentname/syslog_agentname.subagent.sdkrfilereader.properties
+## ----------
+## Change Log:
+## 01.24.19 - revised version.
  
 do.unparsed.events=true
  
@@ -26,7 +22,9 @@ token[2].name=
 token[2].type=TimeStamp
 token[3].name=
 token[3].type=String
- 
+
+# trim.tokens=true
+
 #
 ## EVENTS
 #
@@ -39,14 +37,16 @@ event.name=__stringConstant("")
 event.message=
  
 #
-## CUSTOM VERSION (I use this for troubleshooting)
+## CUSTOM VERSION (Use for Validation and Troubleshooting)
 #
 
-event.flexString1=__stringConstant("")
-event.flexString1Label=__stringConstant("Flex Version")
+event.flexString1=__stringConstant("syslog_agentname.sdkrfilereader.properties")
+event.flexString1Label=__stringConstant("Parser Override")
+event.flexString2=__stringConstant("V0.1")
+event.flexString2Label=__stringConstant("Parser Version")
  
 #
-## CATEGORIZATION
+## CATEGORIZATION (Use if you want to keep all events in the same category - otherwise use a map/categorizer file)
 #
  
 #event.categoryDeviceGroup=__stringConstant("/Operating System")
@@ -62,3 +62,12 @@ event.flexString1Label=__stringConstant("Flex Version")
 #severity.map.high.if.deviceSeverity=High
 #severity.map.medium.if.deviceSeverity=
 #severity.map.low.if.deviceSeverity=
+
+#
+## Map
+#
+
+# extraprocessor.count=1
+# extraprocessor[0].type=map
+# extraprocessor[0].filename=ciscoaci_syslog/syslog_agentname.map.csv
+# extraprocessor[0].charencoding=US-ASCII
