@@ -1,0 +1,54 @@
+Operator Type Meaning Usage
+EQ String/Integer/Address Equal name EQ “accept”
+NE String/Integer/Address Not Equal name NE “accept”
+In String/Integer/Address In list name In
+(“accept”,
+”pass”,
+“permit”)
+StartsWith String Matches any field that
+starts with the given
+string.
+name StartsWith
+“acc”
+EndsWith String Matches any field
+ending with the given
+string.
+name EndsWith
+“ept”
+Contains String Matches any field where
+the given string appears
+anywhere in the field
+name Contains
+“cep”
+Like String Allows the use of a
+percent sign (%) as a
+wild card
+name Like
+“%ecp%”
+Is String/Integer/Address Reserved to match Null
+(a.k.a. empty) fields
+name Is “NULL”
+also
+name Is “NOT
+NULL”
+GT Integer/Address Greater Than > destinationPort
+GT “1024”
+LT Integer/Address Less Than < destinationPort
+LT “1024”
+GE Integer/Address Greater Than or Equal
+>=
+destinationPort
+GE “1024”
+LE Integer/Address Less Than or Equal <= destinationPort
+LE “1024”
+Between Integer/Address Value is between the
+given values (inclusive)
+destinationPort
+Between (“9000”,
+“9010”)
+InSubnet Address Match address in a
+subnet using slash
+notation.
+sourceAddress
+InSubnet
+“10.1.1.0/24”
