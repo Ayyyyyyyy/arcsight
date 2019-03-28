@@ -9,6 +9,7 @@
         - [File Name Insertion](#-file-name-insertion)
         - [UserName Extraction](#-username-extraction)
         - [URI Replacement](#-uri-replacement)
+        - [String Replacement](#-string-replacement)
         - [Custom Report Archive Folder](#-custom-report-archive-folder)
     - [Case Template](#-case-template)
 
@@ -110,6 +111,12 @@ $sub3.replaceAll('\p{Punct}', '').toLowerCase()
 ####  [↑](#content) URI Replacement
 ```javascript
 #if($deviceHostName.endsWith("test.com"))/AllCustomers/TEST#elseif($agentHostName.endsWith("test.com"))/All Customers/CORP#end
+```
+####  [↑](#content) String Replacement
+```javascript
+## Sample: hxxps:// to https://
+#set ($http = $requestUrl.replace('hxxp','http'))
+$http
 ```
 ####  [↑](#content) Custom Report Archive Folder
 ```javascript
