@@ -226,7 +226,7 @@ Resource Name: Categories
 Resource Type: Rule
 Resource Path: /All Rules/Real-time Rules/ISA/Stage/Categories
 ```
-### No Match
+### No Match (Notice the "FAIL" Variable at the bottom populated)
 ```javascript
 // ----- Case Details ----- //
 Originating ESM: 1234
