@@ -13,8 +13,8 @@
 #### How to Create it.
 1. On the Tier 2 ESM, Select the option to create a global variable using the EvaluateVelocityTemplate option
 2. Paste the code from below into the text box
-3. Select the "Local Variables" tab and add the other 3 local variables (also in the code...)
-4. Assign the newly created blobal variable to a "Create New Case" action on a rule
+3. Select the "Local Variables" tab and add the other 3 local variables ("arc, fail, lvcategory")
+4. Assign the newly created global variable to a "Create New Case" action on a rule.
 5. Ensure you're aggregating on all fields you plan to use in the template as well as the global variable itself. 
 
 ### gvCaseInfo
@@ -171,7 +171,7 @@ Resource Path: $fPath
 ……………………………..,<`.._|_,-&“…………….`
 ```
 
-### lvCategory (Final Local variable of gvCaseInfo)
+### lvCategory (3rd (Final) Local variable of gvCaseInfo)
 ```javascript
 ## Name:        lvCategory
 ## Version:     1.0
