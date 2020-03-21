@@ -103,8 +103,12 @@ Device Class ID: $dEventId
 Device Action: $dAction
 $newLine
 // ----- Host Details ----- //
+#if (sHost.length()>0)
 Source Host: $sHost
+#end
+#if ($sIP.length()>0)
 Source Address: $sIP
+#end
 Source Domain: $sDNS
 Source User Name: $sUserName
 Source UID: $sUserID
@@ -120,6 +124,8 @@ Dest. Port: $dPort
 Dest. Zone: $dZName
 $divider
 $newLine
+// ----- Additional "Checks" to  ----- //
+#if ($
 $lvCategory
 ```
 ### ARC (1st Local Variable of gvCaseInfo)
