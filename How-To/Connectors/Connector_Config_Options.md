@@ -1,7 +1,7 @@
 ## Multi-Threading ##
 
 #### Links:
-[Caching Issues] (https://www.protect724.hpe.com/groups/esm-performance/blog/2016/01/14/a-killer-option-that-will-force-your-connectors-to-get-rid-of-the-caching?commentID=14822%23comment-14822)
+[Caching Issues](https://www.protect724.hpe.com/groups/esm-performance/blog/2016/01/14/a-killer-option-that-will-force-your-connectors-to-get-rid-of-the-caching?commentID=14822%23comment-14822)
 
 ### Syslog parser multithreading
 ```
